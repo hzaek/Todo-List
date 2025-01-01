@@ -44,6 +44,26 @@ input:focus{
   outline: none;
 
 }
+input::-webkit-input-placeholder{
+  -webkit-transition: 1s;
+  transition: 1s;
+  
+}
+input::-moz-placeholder{
+  -moz-transition: 1s;
+  transition: 1s;
+  
+}
+input:-ms-input-placeholder{
+  -ms-transition: 1s;
+  transition: 1s;
+  
+}
+input::-ms-input-placeholder{
+  -ms-transition: 1s;
+  transition: 1s;
+  
+}
 input::placeholder{
   transition: 1s;
   
@@ -104,7 +124,8 @@ input::placeholder{
   
   background-color: #00308F;
   background-image: url('../public/trash.png');
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 
 }
 
@@ -138,7 +159,10 @@ input::placeholder{
   right: 10px;
   display: flex;
   gap: 10px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
  
 }
 .lang .background{
@@ -179,7 +203,7 @@ input::placeholder{
   right: 0;
   transition: 0.3s ease-in-out;
   right: 110px;
- 
+  
 
 }
 /* Lang */
