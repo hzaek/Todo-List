@@ -1,0 +1,185 @@
+.App {
+  height: 100svh;
+  background: #74ebd5;
+  background: linear-gradient(
+    to top,
+    #acb6e5,
+    #74ebd5
+  ); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+
+}
+
+main{
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+
+/* Add Task */
+.addTaskWrapper{
+  display: flex;
+  max-width: 100%;
+}
+
+input{
+  border: 2px #101010 solid;
+  padding: 5px;
+  width: 250px;
+  flex-shrink: 10;
+  max-width: 100%;
+}
+input:focus{
+  outline: none;
+
+}
+input::placeholder{
+  transition: 1s;
+  
+}
+.add-bt{
+  background-color: #101010;
+  color: white;
+  font-weight: 900;
+  padding: 0 10px;
+}
+/* Add Task */
+
+/* Tasks */
+.tasksWrapper{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 200px;
+}
+.task{
+  width: 100%;
+  background-color: #eee;
+  padding: 5px 10px;
+  position: relative;
+}
+.task:hover .control{
+  visibility: visible;
+  opacity: 1;
+}
+.control{
+  position: absolute;
+  right: var(--lang);
+  height: 100%;
+  color: white;
+  bottom: 50%;
+  transform: translatey(50%);
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.control .del,.control .edit{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  width: 40px;
+}
+.control .del{
+  background-color: 	#CD5C5C;
+
+}
+.control .edit{
+  
+  background-color: #00308F;
+  background-image: url('../public/trash.png');
+  object-fit: contain;
+
+}
+
+.edit-task{
+  font-size: 16px;
+  width: 100%;
+  background-color: transparent;
+}
+.p-task{
+  overflow: auto;
+
+  white-space: nowrap;
+}
+.p-task::-webkit-scrollbar {
+  display: none;
+}
+
+.taskHover{
+  transition: 0.3s;
+  max-width: 280px;
+}
+.task:hover .taskHover{
+  max-width: 200px;
+}
+/* Tasks */
+
+/* Lang */
+.lang{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  user-select: none;
+ 
+}
+.lang .background{
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  background-color: black;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 40px;
+  width: 100px;
+  text-align: center;
+  right: 0;
+  transition: 0.3s ease-in-out;
+}
+.lang .arabic , .lang .english{
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  font-weight: 700;
+  padding: 10px;
+  width: 100px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.backgroundToArabic{
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  background-color: black;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 40px;
+  width: 100px;
+  text-align: center;
+  right: 0;
+  transition: 0.3s ease-in-out;
+  right: 110px;
+ 
+
+}
+/* Lang */
